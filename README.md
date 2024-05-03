@@ -68,14 +68,7 @@ The results for the resulting model are given in column **(RF2)**
 
 The results on model performance are summarised in the table below.:
 
-|    | kNN | DT | RF | RF2 | LR | SVM | NB | NN | 
-| - | - | - | - | - | - | - | - |
-| Accuracy  |  0.7701   | 0.6878    |  **0.7925**   | **0.7925** |  0.7887   | 0.7776    | 0.7514    | 0.7551    |
-| Sensitivity | 0.7681    | 0.7975    | 0.8168    | 0.8101 | 0.8067     | 0.8029    | **0.8349**    | 0.8200    |
-| Specificity    | **0.8888**    | 0.3629    | 0.6338    | 0.6557 | 0.6441   | 0.5873    | 0.4883    | 0.5312    |
-| False positives | **1**    | 86    | 26    | 21 |  21   |  26   | 66    | 45    |
-| False negatives| 122    |  81   |  85   | 90 | 92    | 93    | **67**    |  79   |
-| Feature importance|     |     |  **X**   |  **X**   |     |     |     |
+![tbl](tbl1.png)
 
 In terms of accuracy, the **Random forest** model performs the best with 79.25% accuracy and this model is also useful as it provides insight into feature importance. Note that hyperparameter optimisation did not achieve an improvement in performance suggesting that the default parameters of the Random forest classifier already result in near ideal performance. (There are marginally more false negatives and less false positives in RF2 though.)
 
@@ -84,7 +77,7 @@ At the other end of the scale, the **kNN** method has the best specificity, and 
 
 From the regression forest model we also obtain feature importance metrics.
 
-![fim](/assets/fim.png)
+![fim](fim.png)
 
 These metrics indicate that the most important predictor of AIDS fatality is the CD4 immune cell count on week 20, followed by the variable indicating whether this is improved or declined compared to the initial measurement. Overall, the top 6 most important features are related to cell counts. This is not surprising as these are generally accepted as indicators of the progression of AIDS.
 
